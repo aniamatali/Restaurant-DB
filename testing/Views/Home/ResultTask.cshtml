@@ -1,0 +1,20 @@
+<p>@Model["cuisine"].GetName()</p>
+
+@foreach (var task in @Model["restaurants"])
+{
+<p>@task.GetDescription()    @task.GetDueDate()</p>
+}
+
+
+
+<form action="/Tasks/Delete" method="post">
+  <button type="submit" class="btn btn-success">Delete All Restaurants</button>
+</form>
+
+<form action="/Categories/@Model["cuisine"].GetId()/Delete" method="post">
+  <button type="submit" class="btn btn-success">Delete This Cuisine</button>
+</form>
+
+<a href="/Categories">View All Cuisines</a>
+<br>
+<a href="/Categories/@Model["cuisine"].GetId()/tasks/new">Add Restaurant</a>

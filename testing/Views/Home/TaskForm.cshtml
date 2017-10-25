@@ -1,0 +1,8 @@
+<form action='/Categories/@Model["cuisine"].GetId()' method='post'>
+  <input id='cuisine-id' name='cuisine-id' type='hidden' value='@Model["cuisine"].GetId()'>
+  <label for='inputRestaurant'>Enter Restaurant Name</label>
+  <input id='inputRestaurant' name='inputRestaurant' type='text'>
+  <label for='inputHours'>Enter Hours</label>
+  <input id='inputHours' name='inputHours' type='text'>
+  <button type='submit'>Add task</button>
+</form>

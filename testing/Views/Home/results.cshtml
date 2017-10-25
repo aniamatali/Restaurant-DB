@@ -1,0 +1,18 @@
+@foreach (var Cuisine in Model)
+{
+<p><a href="Categories/@Cuisine.GetId()">@Cuisine.GetName()</a></p>
+}
+
+<br>
+
+<form action="/Categories" method="post">
+  <label for="inputCuisine">Add another Cuisine:</label>
+  <input name="inputCuisine" class="form-control" id="inputCuisine">
+  <button type="submit" class="btn btn-success">Go.</button>
+</form>
+
+<form action="/Categories/Delete" method="post">
+  <button type="submit" class="btn btn-success">Delete All Cuisines</button>
+</form>
+
+<a href="/">Go home</a>
